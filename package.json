@@ -1,0 +1,15 @@
+{
+  "name": "zone_of_time",
+  "version": "1.0.0",
+  "description": "a timezone bot",
+  "main": "bot.js",
+  "author": "Andrew Boen",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.26"
+  }
+}
