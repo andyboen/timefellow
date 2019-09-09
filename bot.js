@@ -85,6 +85,9 @@ function parseTimeZone(time) {
     case "CEST":
       return timezone.tz(time[0], "h:mm a", "Europe/Paris");
       break;
+    case "GMT":
+      return timezone.tz(time[0], "h:mm a", "Etc/GMT-0");
+      break;
     default:
       return timezone.tz(time[0], "h:mm a", "America/Chicago");
   }
@@ -103,7 +106,9 @@ function getTimezones(time) {
       .format("h:mm a z"),
     "Europe",
     timezone.tz(moment(time, "h:mm a z"), "Europe/London").format("h:mm a z"),
-    timezone.tz(moment(time, "h:mm a z"), "Europe/Paris").format("h:mm a z")
+    timezone.tz(moment(time, "h:mm a z"), "Europe/Paris").format("h:mm a z"),
+    "GMT",
+    timezone.tz(moment(time, "h:mm a z"), "Etc/GMT-0").format("h:mm a z")
   ];
 }
 
